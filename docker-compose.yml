@@ -6,7 +6,7 @@ services:
     volumes:
       - mongodb-data:/data/db
   mongo-express:
-    image: mongo-express/mongo-express
+    image: mongo-express
     ports:
       - 8081:8081
     environment:
