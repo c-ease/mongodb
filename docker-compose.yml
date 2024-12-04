@@ -4,6 +4,8 @@ services:
   mongodb:
     image: mongo:latest
     restart: always
+    ports:
+      - "27017:27017"
     volumes:
       - mongodb-data:/data/db
   mongo-express:
@@ -17,3 +19,6 @@ services:
       - mongodb
 volumes:
   mongodb-data:
+networks:
+  default:
+    name: mongo_network
