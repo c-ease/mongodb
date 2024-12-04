@@ -13,7 +13,7 @@ services:
       - 8081:8081
     environment:
       MONGO_URI: mongodb://mongodb:27017/admin
-    depends-on: 
+    depends_on: 
       - mongodb
 volumes:
   mongodb-data:
